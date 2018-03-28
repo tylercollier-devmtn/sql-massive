@@ -1,5 +1,6 @@
 module.exports = {
   getHeroes: (req, res) => {
+    console.log('hey ryan')
     req.app.get('db').get_heroes().then(heroes => {
       res.status(200).json(heroes);
     }).catch(error => {
